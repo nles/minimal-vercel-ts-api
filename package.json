@@ -1,0 +1,13 @@
+{
+  "name": "minimal-vercel-ts-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@now/node": "^1.5.0"
+  },
+  "scripts": {
+    "dev": "npx now@16.6.3 dev --listen 8081",
+    "deploy": "npx vercel@latest -t $VERCEL_TOKEN"
+  }
+}
