@@ -47,6 +47,7 @@ export const setCorsHeadersAndSkipOptionsReq = (req: CustomRequest, res: CustomR
   // don't continue further with OPTIONS request (just respond with 200)
   if (req.method === 'OPTIONS') {
     if (res.send) res.send(200);
-    return;
+    return false;
   }
+  return true;
 };

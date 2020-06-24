@@ -1,7 +1,7 @@
 import * as base from './_lib/base';
 
 export default async (req: CustomRequest, res: CustomResponse) => {
-  base.setCorsHeadersAndSkipOptionsReq(req, res);
+  if (!base.setCorsHeadersAndSkipOptionsReq(req, res)) return;
 
   const name = 'Test';
   const { age = 12 } = req.body || {};
